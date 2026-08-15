@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Sarab">
+      <meta name="description" content="Sarab - Fast Food & Restaurant HTML Template">
+      <title>Nice Restaurant - Fast Food & Restaurant Menu</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i>+1 (800) 123-4567</span>
+                  <span><i class="fas fa-envelope"></i>hello@nicerestaurant.com</span>
+                  <span><i class="fas fa-map-marker-alt"></i>Collage Road Nashik,Maharastra</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <span class="ttag"><i class="fas fa-fire me-1"></i>Free Delivery Today!</span>
+                  <div class="tsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+      <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico"><i class="fas fa-utensils"></i></div>
+                  <div>
+                     <div class="bname">Nice<span>Restaurant</span></div>
+                     <div class="bsub">Fast Food & Restaurant</div>
+                  </div>
+               </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                  <!-- <li class="nav-item"><a class="nav-link" href="#chefs">Chefs</a></li> -->
+                  <!-- <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li> -->
+                  <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li> -->
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               </ul>
+               <div class="d-flex align-items-center gap-1">
+                  <!-- FIX 1: Search button -->
+                  <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
+                  <a href="menu.html" class="nav-link nav-cta"><i class="fas fa-shopping-bag me-1"></i>Order Now</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- ============================================================
+         FIX 1 � SEARCH OVERLAY POPUP
+         ============================================================ -->
+      <div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What are you craving today?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search burgers, pizza, chicken..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Categories inside search box -->
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <img src="img/menu/1.jpg" alt=""/>All Items
+               </div>
+               <div class="sovcat" data-cat="burgers">
+                  <img src="img/menu/1.jpg" alt=""/>Burgers
+               </div>
+               <div class="sovcat" data-cat="pizza">
+                  <img src="img/menu/2.jpg" alt=""/>Pizza
+               </div>
+               <div class="sovcat" data-cat="chicken">
+                  <img src="img/menu/3.jpg" alt=""/>Chicken
+               </div>
+               <div class="sovcat" data-cat="wraps">
+                  <img src="img/menu/4.jpg" alt=""/>Wraps
+               </div>
+               <div class="sovcat" data-cat="pasta">
+                  <img src="img/menu/5.jpg" alt=""/>Pasta
+               </div>
+               <div class="sovcat" data-cat="desserts">
+                  <img src="img/menu/6.jpg" alt=""/>Desserts
+               </div>
+            </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Smash Burger</span>
+               <span class="ttag">Nashville Chicken</span>
+               <span class="ttag">Truffle Pizza</span>
+               <span class="ttag">Lava Cake</span>
+               <span class="ttag">Loaded Fries</span>
+               <span class="ttag">Mango Shake</span>
+            </div>
+         </div>
+      </div>
+      <div style="height: 2px;"></div>
+      
+    <section id="Menu" class="Menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menu</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p><i><u>“A journey of taste, from starters to desserts.”</u></i></p>
+      </div>
+
+  <section class="menu-panel">
+    <section id="menu">
+       
+            <!-- FIX 3   filter buttons -->
+            <div class="text-center mb-4" data-aos="fade-up">
+               <button class="filtbtn active" data-f="all">All</button>
+               <button class="filtbtn" data-f="burgers">Burgers</button>
+               <button class="filtbtn" data-f="pizza">Pizza</button>
+               <button class="filtbtn" data-f="chicken">Chicken</button>
+               <button class="filtbtn" data-f="wraps">Wraps</button>
+               <button class="filtbtn" data-f="desserts">Desserts</button>
+               <button class="filtbtn" data-f="pasta">Pasta</button>
+            </div>
+            <div class="row g-4 mb-4" id="mgrid">
+              
+               <!-- CARD 1: Burgers -->
+               <div class="col-sm-6 col-lg-4 mwrap " data-c="burgers" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/1.jpg"
+                     data-title="Classic Smash Burger"
+                     data-cat="Burgers"
+                     data-price="$14.99" data-old="$18.99"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="620" data-time="12"
+                     data-desc="Double smashed patty, cheddar cheese, caramelized onions, house pickles and our legendary special sauce. Made fresh to order on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Beef">
+                     <div class="mimg">
+                        <img src="img/menu/1.jpg" alt="Smash Burger"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Burgers</div>
+                        <div class="mtit">Classic Smash Burger</div>
+                        <div class="mdesc">Double smashed patty, cheddar, caramelized onions, pickles &amp; special sauce</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$14.99 <small>$18.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: Pizza -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.jpg"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="img/menu/2.jpg" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pizza</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$19.99 <small>$24.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 3: Chicken -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="chicken" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/3.jpg"
+                     data-title="Nashville Hot Chicken"
+                     data-cat="Chicken"
+                     data-price="$12.99" data-old="$16.99"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="710" data-time="15"
+                     data-desc="Extra-crispy fried chicken tossed in our signature fiery Nashville spice blend, served with honey drizzle and house pickles on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Crispy">
+                     <div class="mimg">
+                        <img src="img/menu/3.jpg" alt="Chicken"/>
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Chicken</div>
+                        <div class="mtit">Nashville Hot Chicken</div>
+                        <div class="mdesc">Crispy fried chicken in fiery Nashville spice blend with honey drizzle</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$12.99 <small>$16.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 4: Wraps -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="wraps" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/4.jpg"
+                     data-title="Loaded Fajita Wrap"
+                     data-cat="Wraps"
+                     data-price="$10.99" data-old=""
+                     data-rating="4.5" data-reviews="74"
+                     data-cal="520" data-time="10"
+                     data-desc="Grilled chicken strips, saut ed bell peppers and onions, sour cream, fresh guacamole and salsa wrapped in a warm flour tortilla with melted cheddar."
+                     data-tags="Grilled,Fresh,Mexican">
+                     <div class="mimg">
+                        <img src="img/menu/4.jpg" alt="Wrap"/>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Wraps</div>
+                        <div class="mtit">Loaded Fajita Wrap</div>
+                        <div class="mdesc">Grilled chicken, peppers, sour cream &amp; guacamole in a warm tortilla</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$10.99</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 5: Desserts -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="desserts" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/5.jpg"
+                     data-title="Nutella Lava Cake"
+                     data-cat="Desserts"
+                     data-price="$8.99" data-old="$11.99"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="390" data-time="8"
+                     data-desc="Warm molten chocolate cake with a gooey Nutella center, served alongside Madagascar vanilla bean ice cream with salted caramel drizzle and fresh berries."
+                     data-tags="Sweet,New,Chocolate">
+                     <div class="mimg">
+                        <img src="img/menu/5.jpg" alt="Lava Cake"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Desserts</div>
+                        <div class="mtit">Nutella Lava Cake</div>
+                        <div class="mdesc">Molten chocolate cake with Nutella center, vanilla ice cream &amp; caramel</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$8.99 <small>$11.99</small></div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 6: Pasta -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="pasta" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/6.jpg"
+                     data-title="Truffle Mushroom Pasta"
+                     data-cat="Pasta"
+                     data-price="$16.99" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="560" data-time="20"
+                     data-desc="Al dente tagliatelle tossed with mixed wild mushrooms, freshly shaved black truffle, aged parmesan, fresh thyme and a touch of cream in garlic butter."
+                     data-tags="Vegetarian,Chef's Pick,Italian">
+                     <div class="mimg">
+                        <img src="img/menu/6.jpg" alt="Pasta"/>
+                        <div class="mbdg hot">Chef's Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Pasta</div>
+                        <div class="mtit">Truffle Mushroom Pasta</div>
+                        <div class="mdesc">Al dente tagliatelle, wild mushrooms, black truffle, parmesan &amp; thyme</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">$16.99</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                           </div>
+                           <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end #mgrid -->
+            <!-- <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Menu</a></div>
+         </div> -->
+      </section>
+      
+      
+      <div id="menuPop">
+         <div class="mpbox">
+            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
+            <div class="mpbody">
+               <div id="mpCat"></div>
+               <div id="mpTitle"></div>
+               <div id="mpStars"></div>
+               <div id="mpDesc"></div>
+               <div id="mpPrice"></div>
+               <div class="mpmeta" id="mpMeta"></div>
+               <div class="mpqty">
+                  <button class="mpqbtn" id="mpMinus">-</button>
+                  <span class="mpqnum" id="mpQnum">1</span>
+                  <button class="mpqbtn" id="mpPlus">+</button>
+                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">portion</span>
+               </div>
+               <div class="mptags" id="mpTags"></div>
+               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+         </div>
+      </div>
+      <!-- SPECIAL OFFER -->
+      <!-- <section id="special"> -->
+         <!-- <div class="spbg"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
+                  <h2 class="sptitle">Get 30% Off<br/>Our Signature<br/><span>Burger</span> Meal</h2>
+                  <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with loaded fries and a premium shake at an unbeatable price.</p>
+                  <div class="cdwrap">
+                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Hours</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
+                  </div>
+                  <a href="#menu" class="btn-red"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="spimgw">
+                     <div class="spglow"></div>
+                     <div class="sppbdg"><span class="old">$24.99</span><span class="np">$17.49</span></div>
+                     <img src="img/off-img.jpg" alt="Special Burger"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> --> 
+
+      
+
+
+
+    <div class="menu-grid">
+
+      <div class="menu-category">
+        <h3>All Time Favourites</h3>
+        <div class="menu-row"><span class="dish-name">French Fries</span><span class="dish-price">₹106</span></div>
+        <div class="menu-row"><span class="dish-name">Chilli Cheese Toast</span><span class="dish-price">₹115</span></div>
+        <div class="menu-row"><span class="dish-name">Chilli Cheese Garlic Toast</span><span class="dish-price">₹115</span></div>
+        <div class="menu-row"><span class="dish-name">Garlic Bread</span><span class="dish-price">₹98</span></div>
+        <div class="menu-row"><span class="dish-name">Garlic Bread with Cheese</span><span class="dish-price">₹110</span></div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Starters</h3>
+        <div class="menu-row"><span class="dish-name">Paneer Tikka</span><span class="dish-price">₹180</span></div>
+        <div class="menu-row"><span class="dish-name">Hara Bhara Kebab</span><span class="dish-price">₹165</span></div>
+        <div class="menu-row"><span class="dish-name">Mushroom 65</span><span class="dish-price">₹175</span></div>
+        <div class="menu-row"><span class="dish-name">Crispy Corn</span><span class="dish-price">₹145</span></div>
+        <div class="menu-row"><span class="dish-name">Veg Spring Rolls</span><span class="dish-price">₹155</span></div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Mains</h3>
+        <div class="menu-row"><span class="dish-name">Dal Makhani</span><span class="dish-price">₹195</span></div>
+        <div class="menu-row"><span class="dish-name">Palak Paneer</span><span class="dish-price">₹210</span></div>
+        <div class="menu-row"><span class="dish-name">Kadai Paneer</span><span class="dish-price">₹220</span></div>
+        <div class="menu-row"><span class="dish-name">Veg Biryani</span><span class="dish-price">₹230</span></div>
+        <div class="menu-row"><span class="dish-name">Butter Naan</span><span class="dish-price">₹55</span></div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Beverages(Drink's)</h3>
+
+        <div class="menu-row"><span class="dish-name">Masala Chai</span><span class="dish-price">₹60</span></div>
+        <div class="menu-row"><span class="dish-name">Cold Coffee</span><span class="dish-price">₹120</span></div>
+        <div class="menu-row"><span class="dish-name">Fresh Lime Soda</span><span class="dish-price">₹80</span></div>
+        <div class="menu-row"><span class="dish-name">Mango Lassi</span><span class="dish-price">₹110</span></div>
+        <div class="menu-row"><span class="dish-name">Filter Coffee</span><span class="dish-price">₹75</span></div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Desserts</h3>
+        <div class="menu-row"><span class="dish-name">Gulab Jamun</span><span class="dish-price">₹90</span></div>
+        <div class="menu-row"><span class="dish-name">Rasgulla</span><span class="dish-price">₹85</span></div>
+        <div class="menu-row"><span class="dish-name">Kulfi Falooda</span><span class="dish-price">₹130</span></div>
+        <div class="menu-row"><span class="dish-name">Chocolate Brownie</span><span class="dish-price">₹145</span></div>
+        <div class="menu-row"><span class="dish-name">Kheer</span><span class="dish-price">₹95</span></div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Chef's Specials</h3>
+        <div class="menu-row"><span class="dish-name">Spice Haven Platter</span><span class="dish-price">₹450</span></div>
+        <div class="menu-row"><span class="dish-name">Signature Thali</span><span class="dish-price">₹395</span></div>
+        <div class="menu-row"><span class="dish-name">Saffron Pulao</span><span class="dish-price">₹260</span></div>
+        <div class="menu-row"><span class="dish-name">Dum Aloo</span><span class="dish-price">₹230</span></div>
+        <div class="menu-row"><span class="dish-name">Tandoori Roti Basket</span><span class="dish-price">₹140</span></div>
+      </div>
+
+    </div>
+  </section>
+<!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-4">
+                  <div class="fnm">Sar<span>ab</span></div>
+                  <p class="fdesc">We bring the world's finest flavors together in a fast, friendly, and affordable experience. Every meal crafted with love.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Quick Links</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                     <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Our Menu</a></li>
+                     <li><a href="#reservation"><i class="fas fa-chevron-right"></i>Reservation</a></li>
+                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                     <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                  </ul>
+               </div>
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Our Menu</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Burgers</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Pizza</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Fried Chicken</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Wraps &amp; Rolls</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Pasta</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Desserts</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4">
+                  <div class="ftit">Get In Touch</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Address</strong>Collage Road Nashik,Maharastra</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Phone</strong>+1 (800) 123-4567</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email</strong>hello@nicerestaurant.com</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-clock"></i></div>
+                     <div class="fciinfo"><strong>Hours</strong>Wed - Sun: 09 AM - 11 PM</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <!-- <p>&copy 2026 <span>Sarab Restaurant</span>. All Rights Reserved by <a target="_blank" class="mx-0 fw-bold text-success" href="https://bestwpware.com/">Bestwpware</a>. Made with <span><i class="fas fa-heart"></i></span>  <br>Distributed by <a target="_blank" class="mx-0 fw-bold text-success" href="https://themewagon.com">ThemeWagon</a></p> -->
+                  <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Floating cart -->
+      <!-- <div class="cartfl"><i class="fas fa-shopping-cart"></i><span>My Cart</span><div class="ccount" id="cartCount">0</div></div> -->
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+	<!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- CounterUp -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>
